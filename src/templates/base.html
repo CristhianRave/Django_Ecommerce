@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Django Ecom {% block head_title %}{% endblock %}</title>
+    <title>Django Ecommerce  {% block head_title %}{% endblock %}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="apple-touch-icon" sizes="57x57" href="{% static 'icons/apple-icon-57x57.png' %}">
@@ -47,7 +47,7 @@
                 <div class="row align-items-center">
                     <div class="col-6 col-md-8 mb-3 mb-md-0 col-md-4 order-1 order-md-2">
                         <div>
-                            <a href="#">
+                            <a href="{% url 'index' %}">
                                 <img class="img-fluid" src="{% static 'images/logo.png' %}" style="max-width: 150px;"/>
                             </a>
                         </div>

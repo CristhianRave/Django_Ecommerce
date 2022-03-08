@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}    
+<div class="bg-light py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mb-0">
+                <a href="{% url 'index' %}">Home</a>
+                <span class="mx-2 mb-0">/</span>
+                <strong class="text-block">Shop</strong>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="site-section">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for product in products %}
+            <div class="col-3 mb-5" data-aos='fade-up'>
+                <a class="text-decoration-none" href="">
+                    <div class="card h-100">
+                        <img src="{{product.image.url}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{product.title}}</h5>
+                            <p class="card-text">{{product.description}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
